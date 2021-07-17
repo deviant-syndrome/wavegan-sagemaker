@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Use checkpoint if provided
+CHECKPOINT=/opt/ml/input/data/checkpoint/model.tar.gz
+if test -f "$CHECKPOINT"; then
+    tar -xvzf /opt/ml/input/data/checkpoint/model.tar.gz -C /opt/ml/model
+fi
+
+# Start the training
+python3 train_wavegan.py train /opt/ml/model/ --data_dir /opt/ml/input/data/training
