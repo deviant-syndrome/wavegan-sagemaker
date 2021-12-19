@@ -49,7 +49,7 @@ Otherwise, you can use AWS SageMaker GUI to create a training job, it has pretty
  
 #### Misc. info
 This image is built upon a GPU-optimized Tensorflow image. The original code of WaveGAN was primarly targeted to single-GPU systems and did
- not have support to LA-optimized computational devices. This can be added relatively easily, however I would need to a PR request to original
+ not have support to LA-optimized computational devices. This can be added relatively easily, however I would need to do a PR request to original
   maintainers or use my fork for that.   
 
 Also, there is no Sagemaker Tensorflow data or model partitioning support at the moment. The code changes required for that are yet beyond my
